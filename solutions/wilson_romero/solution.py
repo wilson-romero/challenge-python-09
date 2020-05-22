@@ -4,7 +4,7 @@ from typing import List
 class Solution:
     """ Challenge solution """
     def duplicate_zeros(self, arr: List[int]):
-        """ Modify the list by doubling the zeros and correcting the items to the right. """ 
+        """Duplicate zeros and shift right"""
         next_index = 0
         length = len(arr)
         while True:
