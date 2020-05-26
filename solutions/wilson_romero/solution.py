@@ -16,4 +16,6 @@ class Solution:
         length_zeros = len(zeros)
         if length_zeros > 0 and length_zeros < length:
             for step, value in enumerate(zeros):
-                arr[value + 1:] = arr[value:-1]
+                # print(step, value)
+                arr[value + step + 1:] = arr[value + step:-1]
+                # print("c:", arr)
