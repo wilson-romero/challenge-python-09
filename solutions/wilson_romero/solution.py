@@ -14,7 +14,6 @@ class Solution:
                 zeros.append(step)
 
         length_zeros = len(zeros)
-        if length_zeros > 0 and length_zeros < length:
+        if 0 < length_zeros < length:
             for step, value in enumerate(zeros):
                 arr[value + step + 1:] = arr[value + step:-1]
-                
