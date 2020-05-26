@@ -7,8 +7,13 @@ class Solution:
 
     def duplicate_zeros(self, arr: List[int]):
         """Duplicate zeros and shift right"""
-        index = 0
+        length = len(arr)
+        zeros = []
         for step, value in enumerate(arr):
-            if value == 0 and step >= index:
-                arr[step + 1:] = arr[step:-1]
-                index = step + 2
+            if value == 0:
+                zeros.append(step)
+
+        length_zeros = len(zeros)
+        if length_zeros > 0 and length_zeros < length:
+            for step, value in enumerate(zeros):
+                arr[value + 1:] = arr[value:-1]
